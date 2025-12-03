@@ -41,7 +41,7 @@ The visualization uses an intuitive color system:
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm, yarn, or pnpm
 
 ### Installation
@@ -134,13 +134,11 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 **Thales Brederodes**
 
 - GitHub: [@thalesbmc](https://github.com/thalesbmc)
-- LinkedIn: [Thales Brederodes](https://linkedin.com/in/thalesbrederodes)
 
 ## 🙏 Acknowledgments
 
 - [CityBikes API](https://citybik.es/) for providing free bike-sharing data
 - [OpenStreetMap](https://www.openstreetmap.org/) contributors for map data
-- [Transport for London](https://tfl.gov.uk/) for the Santander Cycles network
 
 ---
 
