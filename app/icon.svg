@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="bikeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a9eff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6bb3ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#0f1420" stroke="url(#bikeGradient)" stroke-width="3"/>
+  
+  <!-- Bike icon -->
+  <!-- Front wheel -->
+  <circle cx="30" cy="65" r="12" fill="none" stroke="url(#bikeGradient)" stroke-width="3"/>
+  <circle cx="30" cy="65" r="2" fill="#4a9eff"/>
+  
+  <!-- Back wheel -->
+  <circle cx="70" cy="65" r="12" fill="none" stroke="url(#bikeGradient)" stroke-width="3"/>
+  <circle cx="70" cy="65" r="2" fill="#4a9eff"/>
+  
+  <!-- Frame -->
+  <line x1="30" y1="65" x2="50" y2="35" stroke="url(#bikeGradient)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="50" y1="35" x2="70" y2="65" stroke="url(#bikeGradient)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="50" y1="35" x2="60" y2="35" stroke="url(#bikeGradient)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="45" y1="50" x2="70" y2="50" stroke="url(#bikeGradient)" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Seat -->
+  <line x1="60" y1="35" x2="65" y2="30" stroke="url(#bikeGradient)" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="67" cy="29" rx="5" ry="2" fill="#4a9eff"/>
+  
+  <!-- Handlebar -->
+  <line x1="30" y1="65" x2="25" y2="45" stroke="url(#bikeGradient)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="20" y1="45" x2="30" y2="45" stroke="url(#bikeGradient)" stroke-width="3" stroke-linecap="round"/>
+</svg>
+

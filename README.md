@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚴‍♂️ London Bike Availability Monitor
 
-## Getting Started
+A real-time interactive visualization of bike availability across Central London's Santander Cycles network.
 
-First, run the development server:
+![London Bike Monitor](https://img.shields.io/badge/Status-Live-success)
+![Next.js](https://img.shields.io/badge/Next.js-15-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+## 🎯 Overview
+
+This project provides an intuitive, real-time map visualization to help Londoners quickly find available bikes across Central London. The interface uses color-coded markers where brighter blue indicates higher bike availability, making it easy to spot the best stations at a glance.
+
+### Key Features
+
+- 🗺️ **Interactive Map** - Explore 284+ bike stations across Central London
+- 🔵 **Visual Availability** - Color-coded markers (brighter = more bikes available)
+- 📊 **Live Statistics** - Real-time data on bikes, stations, and availability
+- 🔄 **Auto-refresh** - Data updates automatically every 30 seconds
+- 🎨 **Modern UI** - Dark theme with smooth animations and hover effects
+- 📱 **Responsive Design** - Works seamlessly across devices
+
+## 🚀 Tech Stack
+
+- **Framework:** [Next.js 15](https://nextjs.org/) with App Router
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [TailwindCSS](https://tailwindcss.com/)
+- **Maps:** [Leaflet](https://leafletjs.com/) with React-Leaflet
+- **API:** [CityBikes API](https://citybik.es/)
+
+## 🎨 Color Logic
+
+The visualization uses an intuitive color system:
+
+- **Bright Blue (#4a9eff)** - High availability (>70% bikes available)
+- **Medium Blue (#3d7fd9)** - Good availability (50-70%)
+- **Dark Blue (#3366b3)** - Low availability (30-50%)
+- **Darkest Blue (#2d4d8c)** - Very low availability (<30%)
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm, yarn, or pnpm
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/bike-flow-amsterdam.git
+
+# Navigate to project directory
+cd bike-flow-amsterdam
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+bike-flow-amsterdam/
+├── app/                    # Next.js app directory
+│   ├── globals.css        # Global styles and map customization
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Main page
+├── components/
+│   ├── BikeFlowMap.tsx    # Main map component
+│   ├── InfoPanel/         # Dashboard components
+│   │   ├── InfoPanel.tsx
+│   │   ├── StatsGrid.tsx
+│   │   └── Legend.tsx
+│   ├── Map/               # Map-related components
+│   │   ├── StationMarker.tsx
+│   │   ├── StationPopup.tsx
+│   │   ├── FlowLines.tsx
+│   │   └── FlowParticles.tsx
+│   ├── LoadingScreen.tsx
+│   └── ErrorScreen.tsx
+├── hooks/
+│   ├── useBikeData.ts     # Data fetching hook
+│   └── useFlowAnimation.ts # Animation logic
+├── types/
+│   └── bike.ts            # TypeScript types
+└── utils/
+    └── mapHelpers.ts      # Helper functions
+```
 
-## Learn More
+## 🎯 Use Cases
 
-To learn more about Next.js, take a look at the following resources:
+- **Commuters** - Check bike availability before leaving home/office
+- **Tourists** - Find nearby bikes for exploring London
+- **Data Enthusiasts** - Visualize real-time urban mobility patterns
+- **Urban Planners** - Understand bike-sharing usage patterns
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔮 Future Enhancements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [ ] Historical data analysis
+- [ ] Predictive availability based on time/day
+- [ ] Route planning between stations
+- [ ] Mobile app version
+- [ ] Multi-city support
 
-## Deploy on Vercel
+## 📝 API Reference
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project uses the [CityBikes API](https://api.citybik.es/v2/) which provides real-time bike-sharing data for cities worldwide.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+GET https://api.citybik.es/v2/networks/santander-cycles
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👨‍💻 Author
+
+**Thales Brederodes**
+
+- GitHub: [@thalesbmc](https://github.com/thalesbmc)
+- LinkedIn: [Thales Brederodes](https://linkedin.com/in/thalesbrederodes)
+
+## 🙏 Acknowledgments
+
+- [CityBikes API](https://citybik.es/) for providing free bike-sharing data
+- [OpenStreetMap](https://www.openstreetmap.org/) contributors for map data
+- [Transport for London](https://tfl.gov.uk/) for the Santander Cycles network
+
+---
+
+⭐ If you found this project helpful, please consider giving it a star!
