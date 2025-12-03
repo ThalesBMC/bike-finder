@@ -14,7 +14,7 @@ export function StationPopup({ station }: StationPopupProps) {
   const stationName = station.name.split(" - ").slice(1).join(" - ") || station.name;
 
   return (
-    <Popup>
+    <Popup closeOnClick={true} closeButton={true} autoClose={false}>
       <div className="modal-card">
         <div className="modal-header">
           <h3 className="modal-title">{stationName}</h3>
