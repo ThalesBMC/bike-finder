@@ -21,7 +21,7 @@ export function InfoPanel({
   activityHistory,
 }: InfoPanelProps) {
   return (
-    <div className="absolute top-6 left-6 z-[1000] w-96">
+    <div className="info-panel-container absolute top-6 left-6 z-[1000] w-96">
       <div className="bg-[#0f1420] backdrop-blur-xl rounded-2xl border border-[#2a3f5f]/50 shadow-[0_0_40px_rgba(74,158,255,0.1)] overflow-hidden">
         <div className="h-[2px] bg-gradient-to-r from-transparent via-[#4a9eff] to-transparent" />
 

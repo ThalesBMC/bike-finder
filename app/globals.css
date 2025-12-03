@@ -44,15 +44,20 @@ body {
 .leaflet-container a.leaflet-popup-close-button {
   color: var(--flame-blue-light) !important;
   font-size: 22px !important;
-  padding: 8px 14px !important;
+  padding: 16px 20px !important;
   font-weight: 300 !important;
-  top: 4px !important;
-  right: 4px !important;
+  top: 0px !important;
+  right: 0px !important;
+  width: 48px !important;
+  height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .leaflet-container a.leaflet-popup-close-button:hover {
   color: #ffffff !important;
-  background: transparent !important;
+  background: rgba(74, 158, 255, 0.1) !important;
 }
 
 /* Modal Card Styles */
@@ -253,4 +258,22 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--flame-blue-dark);
+}
+
+/* Hide zoom controls on mobile */
+@media (max-width: 768px) {
+  .leaflet-control-zoom {
+    display: none !important;
+  }
+
+  .info-panel-container {
+    display: none !important;
+  }
+}
+
+/* Show info panel on desktop */
+@media (min-width: 769px) {
+  .info-panel-container {
+    display: block !important;
+  }
 }
