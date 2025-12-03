@@ -1,42 +1,42 @@
 # London Bike Flow Map
 
-Visualização em tempo real da disponibilidade de bikes do Santander Cycles em Londres Central.
+Real-time visualization of Santander Cycles bike availability across Central London.
 
-## O que é
+## What it is
 
-Mapa interativo mostrando 284+ estações de bike sharing em Londres. Marcadores coloridos indicam disponibilidade: quanto mais claro o azul, mais bikes disponíveis.
+Interactive map showing 284+ bike sharing stations in London. Color-coded markers indicate availability: brighter blue means more bikes available.
 
 **Features:**
 
-- Dados em tempo real (atualização a cada 30s)
-- Estatísticas ao vivo
-- Interface responsiva com tema dark
-- Popups com detalhes de cada estação
+- Real-time data (updates every 30s)
+- Live statistics
+- Responsive interface with dark theme
+- Popups with station details
 
 ## Stack
 
 - Next.js 15 + TypeScript
 - TailwindCSS
-- Leaflet (mapas)
+- Leaflet (maps)
 - CityBikes API
 
-## Como rodar
+## How to run
 
 ```bash
-# Instalar dependências
+# Install dependencies
 npm install
 
-# Rodar em desenvolvimento
+# Run in development
 npm run dev
 ```
 
-Abra [http://localhost:3000](http://localhost:3000)
+Open [http://localhost:3000](http://localhost:3000)
 
-## Estrutura
+## Structure
 
 ```
 ├── app/              # Next.js App Router
-├── components/       # Componentes React
+├── components/       # React components
 │   ├── BikeFlowMap.tsx
 │   ├── InfoPanel/
 │   └── Map/
@@ -47,7 +47,7 @@ Abra [http://localhost:3000](http://localhost:3000)
 
 ## API
 
-Usa a [CityBikes API](https://api.citybik.es/v2/):
+Uses [CityBikes API](https://api.citybik.es/v2/):
 
 ```
 GET https://api.citybik.es/v2/networks/santander-cycles
